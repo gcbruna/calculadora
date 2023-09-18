@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Calculadora</title>
+</head>
+
+<body class="bg-gradient-to-r from-indigo-300  to-pink-300 min-h-screen flex items-center justify-center">
+    <div class="bg-white p-5 rounded-lg shadow-md w-96">
+        <div class="mb-4 bg-cyan-950 text-white w-full p-5 border rounded-md grid grid-cols-3 gap-1">
+            <input type="text" id="display1" maxlength="4" class="bg-cyan-900 text-white px-5 text-2xl rounded-md">
+            <input type="text" id="display2" maxlength="4" class="bg-cyan-900 text-white px-5 text-2xl rounded-md"> 
+            <p id="resultado" maxlength="5" class=" text-white text-2xl px-5 rounded-md">=</p>
+        </div>
+        <div id="buttons" class="grid grid-cols-4 gap-2">
+            <input type="button" value='7' class="col-span-1 p-2 bg-gray-300 hover:bg-gray-400 text-gray-800 hover:text-gray-900 rounded-md"></input>
+            <input type="button" value='8' class="col-span-1 p-2 bg-gray-300 hover:bg-gray-400 text-gray-800 hover:text-gray-900 rounded-md"></input>
+            <input type="button" value='9' class="col-span-1 p-2 bg-gray-300 hover:bg-gray-400 text-gray-800 hover:text-gray-900 rounded-md"></input>
+
+            <input type="button" id="somar" value="+" onclick="somar()"
+                class="col-span-1 p-2 bg-yellow-400 hover:bg-yellow-500 text-yellow-900 hover:text-yellow-800 rounded-md"></input>
+
+            <input type="button" value='4' class="col-span-1 p-2 bg-gray-300 hover:bg-gray-400 text-gray-800 hover:text-gray-900 rounded-md"></input>
+            <input type="button" value='5' class="col-span-1 p-2 bg-gray-300 hover:bg-gray-400 text-gray-800 hover:text-gray-900 rounded-md"></input>
+            <input type="button" value='6' class="col-span-1 p-2 bg-gray-300 hover:bg-gray-400 text-gray-800 hover:text-gray-900 rounded-md"></input>
+
+            <input type="button" value="-" onclick="subtrair()"
+                class="col-span-1 p-2 bg-yellow-400 hover:bg-yellow-500 text-yellow-900 hover:text-yellow-800 rounded-md"></input>
+
+            <input type="button" value='1' class="col-span-1 p-2 bg-gray-300 hover:bg-gray-400 text-gray-800 hover:text-gray-900 rounded-md"></input>
+            <input type="button" value='2' class="col-span-1 p-2 bg-gray-300 hover:bg-gray-400 text-gray-800 hover:text-gray-900 rounded-md"></input>
+            <input type="button" value='3' class="col-span-1 p-2 bg-gray-300 hover:bg-gray-400 text-gray-800 hover:text-gray-900 rounded-md"></input>
+
+            <input type="button" value="*" onclick="multiplicar()"
+                class="col-span-1 p-2 bg-yellow-400 hover:bg-yellow-500 text-yellow-900 hover:text-yellow-800 rounded-md"></input>
+
+            <input type="button" value='0' class="col-span-1 p-2 bg-gray-300 hover:bg-gray-400 text-gray-800 hover:text-gray-900 rounded-md"></input>
+
+            <input type="button" value="C" onclick="apagar()"
+             class="col-span-2 p-2 bg-red-300 hover:bg-red-400 text-gray-800 hover:text-gray-900 rounded-md"></input>
+
+            <input type="button" value="/" onclick="dividir()"
+            class="col-span-1 p-2 bg-yellow-400 hover:bg-yellow-500 text-yellow-900 hover:text-yellow-800 rounded-md"></input>
+        </div>
+    </div>
+
+    <script src="./calculadora.js"></script>
+</body>
+
+</html>
